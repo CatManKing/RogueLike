@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://ct2alssvtp35x"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_er4e0"]
+[ext_resource type="Texture2D" uid="uid://ckxpykyu23mmy" path="res://icon.svg" id="1_s45bd"]
+[ext_resource type="Resource" uid="uid://kf1fxep51w3e" path="res://PlayerStats.tres" id="2_1a8vf"]
+[ext_resource type="PackedScene" uid="uid://bglxekeek5ds6" path="res://Scenes/bullet.tscn" id="2_3hm1k"]
+[ext_resource type="Script" path="res://Scripts/Weapon.gd" id="4_wpm6g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q0y8l"]
+radius = 61.0
+
+[node name="Player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_er4e0")
+stats = ExtResource("2_1a8vf")
+weapon = NodePath("Weapon")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_s45bd")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_q0y8l")
+
+[node name="Weapon" type="Node2D" parent="CharacterBody2D"]
+script = ExtResource("4_wpm6g")
+projectile_scene = ExtResource("2_3hm1k")

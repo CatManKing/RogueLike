@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://voq37che8s3h"]
+
+[ext_resource type="Script" path="res://Scripts/levelUp.gd" id="1_u4kgh"]
+
+[node name="LevelUp" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u4kgh")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 300.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 10.0
+offset_right = 141.0
+offset_bottom = 33.0
+text = "Level Up!"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 2
+offset_left = 25.0
+offset_top = 40.0
+offset_right = 175.0
+offset_bottom = 90.0
+text = "Speed"
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 2
+offset_left = 25.0
+offset_top = 109.0
+offset_right = 175.0
+offset_bottom = 159.0
+text = "Projectiles"
+
+[node name="Button3" type="Button" parent="Panel"]
+layout_mode = 2
+offset_left = 25.0
+offset_top = 178.0
+offset_right = 175.0
+offset_bottom = 228.0
+text = "Fire rate"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/Button3" to="." method="_on_button_3_pressed"]

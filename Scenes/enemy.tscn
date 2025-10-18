@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://drchxvcqsgj5g"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_1udt5"]
+[ext_resource type="Texture2D" uid="uid://ckxpykyu23mmy" path="res://icon.svg" id="1_gvq2d"]
+[ext_resource type="PackedScene" uid="uid://c25kumqsypcrd" path="res://Scenes/FloatingText.tscn" id="2_2n8av"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_duonk"]
+radius = 68.0661
+
+[node name="Enemy" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_1udt5")
+floating_text_scene = ExtResource("2_2n8av")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_gvq2d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_duonk")

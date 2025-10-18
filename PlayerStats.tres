@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PlayerStats" load_steps=2 format=3 uid="uid://kf1fxep51w3e"]
+
+[ext_resource type="Script" path="res://Scripts/Player_Stats.gd" id="1_mklgj"]
+
+[resource]
+script = ExtResource("1_mklgj")
+move_speed = 500.0
+fire_rate = 0.15
+damage = 5.0
+projectile_speed = 1200.0
+projectile_lifespan = 2.0
+projectile_count = 1
+spread_angle = 10.0
+muzzle_offset = 80.0
