@@ -22,6 +22,7 @@ func _on_button_2_pressed():
 
 func _on_button_3_pressed():
 	stats.fire_rate -= 0.05
+	
 	upgraded()
 
 func upgraded():
