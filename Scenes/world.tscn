@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cd8jato7dykrp"]
 
-[ext_resource type="Script" path="res://Scripts/CaveGenerator.gd" id="1_lf2rv"]
+[ext_resource type="Script" uid="uid://cj086djsrai15" path="res://Scripts/CaveGenerator.gd" id="1_lf2rv"]
 [ext_resource type="PackedScene" uid="uid://ct2alssvtp35x" path="res://Scenes/player.tscn" id="1_qgeu6"]
 [ext_resource type="Texture2D" uid="uid://ckxpykyu23mmy" path="res://icon.svg" id="2_mv7p5"]
 [ext_resource type="Resource" uid="uid://kf1fxep51w3e" path="res://PlayerStats.tres" id="4_8ds0j"]
@@ -46,5 +46,3 @@ format = 2
 [node name="Spawner" parent="." instance=ExtResource("6_famda")]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
